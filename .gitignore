@@ -1,0 +1,15 @@
+# .NET
+bin/
+obj/
+*.suo
+*.user
+.vs/
+
+# IDE
+.vscode/
+.idea/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
