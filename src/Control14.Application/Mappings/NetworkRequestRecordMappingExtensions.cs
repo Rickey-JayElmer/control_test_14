@@ -18,6 +18,9 @@ public static class NetworkRequestRecordMappingExtensions
             record.NicId,
             record.OriginAsn,
             record.RequestHeaders,
-            record.ResponseHeaders);
+            record.ResponseHeaders,
+            record.RemoteAddr,
+            record.XForwardedFor,
+            record.HardwareAddress);
     }
 }

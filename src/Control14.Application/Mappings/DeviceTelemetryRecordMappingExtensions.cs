@@ -15,6 +15,8 @@ public static class DeviceTelemetryRecordMappingExtensions
             record.UserAgent,
             record.DeviceFingerprintHash,
             record.SessionCookieId,
-            record.UtmCampaignId);
+            record.UtmCampaignId,
+            record.Idfa,
+            record.CookieValue);
     }
 }

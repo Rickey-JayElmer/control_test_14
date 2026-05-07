@@ -10,6 +10,8 @@ public class DeviceTelemetryRecord
     public string DeviceFingerprintHash { get; private set; } = string.Empty;
     public string SessionCookieId { get; private set; } = string.Empty;
     public string UtmCampaignId { get; private set; } = string.Empty;
+    public string Idfa { get; private set; } = string.Empty;
+    public string CookieValue { get; private set; } = string.Empty;
 
     private DeviceTelemetryRecord() { }
 
@@ -20,7 +22,9 @@ public class DeviceTelemetryRecord
         string userAgent,
         string deviceFingerprintHash,
         string sessionCookieId,
-        string utmCampaignId)
+        string utmCampaignId,
+        string idfa,
+        string cookieValue)
     {
         return new DeviceTelemetryRecord
         {
@@ -31,7 +35,9 @@ public class DeviceTelemetryRecord
             UserAgent = userAgent,
             DeviceFingerprintHash = deviceFingerprintHash,
             SessionCookieId = sessionCookieId,
-            UtmCampaignId = utmCampaignId
+            UtmCampaignId = utmCampaignId,
+            Idfa = idfa,
+            CookieValue = cookieValue
         };
     }
 
@@ -42,7 +48,9 @@ public class DeviceTelemetryRecord
         string userAgent,
         string deviceFingerprintHash,
         string sessionCookieId,
-        string utmCampaignId)
+        string utmCampaignId,
+        string idfa,
+        string cookieValue)
     {
         DeviceProfile = deviceProfile;
         AdvertisingId = advertisingId;
@@ -51,5 +59,7 @@ public class DeviceTelemetryRecord
         DeviceFingerprintHash = deviceFingerprintHash;
         SessionCookieId = sessionCookieId;
         UtmCampaignId = utmCampaignId;
+        Idfa = idfa;
+        CookieValue = cookieValue;
     }
 }

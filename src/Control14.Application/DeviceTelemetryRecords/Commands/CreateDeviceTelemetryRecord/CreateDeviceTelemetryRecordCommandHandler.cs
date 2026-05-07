@@ -22,7 +22,9 @@ public class CreateDeviceTelemetryRecordCommandHandler : IRequestHandler<CreateD
             request.UserAgent,
             request.DeviceFingerprintHash,
             request.SessionCookieId,
-            request.UtmCampaignId);
+            request.UtmCampaignId,
+            request.Idfa,
+            request.CookieValue);
 
         await _repository.AddAsync(record, cancellationToken);
 

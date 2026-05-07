@@ -25,7 +25,10 @@ public class CreateNetworkRequestRecordCommandHandler : IRequestHandler<CreateNe
             request.NicId,
             request.OriginAsn,
             request.RequestHeaders,
-            request.ResponseHeaders);
+            request.ResponseHeaders,
+            request.RemoteAddr,
+            request.XForwardedFor,
+            request.HardwareAddress);
 
         await _repository.AddAsync(record, cancellationToken);
 

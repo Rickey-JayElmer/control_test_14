@@ -13,6 +13,9 @@ public class NetworkRequestRecord
     public string OriginAsn { get; private set; } = string.Empty;
     public string RequestHeaders { get; private set; } = string.Empty;
     public string ResponseHeaders { get; private set; } = string.Empty;
+    public string RemoteAddr { get; private set; } = string.Empty;
+    public string XForwardedFor { get; private set; } = string.Empty;
+    public string HardwareAddress { get; private set; } = string.Empty;
 
     private NetworkRequestRecord() { }
 
@@ -26,7 +29,10 @@ public class NetworkRequestRecord
         string nicId,
         string originAsn,
         string requestHeaders,
-        string responseHeaders)
+        string responseHeaders,
+        string remoteAddr,
+        string xForwardedFor,
+        string hardwareAddress)
     {
         return new NetworkRequestRecord
         {
@@ -40,7 +46,10 @@ public class NetworkRequestRecord
             NicId = nicId,
             OriginAsn = originAsn,
             RequestHeaders = requestHeaders,
-            ResponseHeaders = responseHeaders
+            ResponseHeaders = responseHeaders,
+            RemoteAddr = remoteAddr,
+            XForwardedFor = xForwardedFor,
+            HardwareAddress = hardwareAddress
         };
     }
 
@@ -54,7 +63,10 @@ public class NetworkRequestRecord
         string nicId,
         string originAsn,
         string requestHeaders,
-        string responseHeaders)
+        string responseHeaders,
+        string remoteAddr,
+        string xForwardedFor,
+        string hardwareAddress)
     {
         NetworkRequestInfo = networkRequestInfo;
         ClientIp = clientIp;
@@ -66,5 +78,8 @@ public class NetworkRequestRecord
         OriginAsn = originAsn;
         RequestHeaders = requestHeaders;
         ResponseHeaders = responseHeaders;
+        RemoteAddr = remoteAddr;
+        XForwardedFor = xForwardedFor;
+        HardwareAddress = hardwareAddress;
     }
 }

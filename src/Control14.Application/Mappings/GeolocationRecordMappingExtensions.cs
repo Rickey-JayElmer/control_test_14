@@ -16,6 +16,7 @@ public static class GeolocationRecordMappingExtensions
             record.Latitude,
             record.LocationHistoryTrail,
             record.GeofenceEntryEvent,
-            record.RegionCode);
+            record.RegionCode,
+            record.UserGpsLat);
     }
 }

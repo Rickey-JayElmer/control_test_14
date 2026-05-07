@@ -23,7 +23,8 @@ public class CreateGeolocationRecordCommandHandler : IRequestHandler<CreateGeolo
             request.Latitude,
             request.LocationHistoryTrail,
             request.GeofenceEntryEvent,
-            request.RegionCode);
+            request.RegionCode,
+            request.UserGpsLat);
 
         await _repository.AddAsync(record, cancellationToken);
 

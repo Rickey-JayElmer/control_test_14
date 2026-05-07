@@ -11,6 +11,7 @@ public class GeolocationRecord
     public string LocationHistoryTrail { get; private set; } = string.Empty;
     public string GeofenceEntryEvent { get; private set; } = string.Empty;
     public string RegionCode { get; private set; } = string.Empty;
+    public double UserGpsLat { get; private set; }
 
     private GeolocationRecord() { }
 
@@ -22,7 +23,8 @@ public class GeolocationRecord
         double latitude,
         string locationHistoryTrail,
         string geofenceEntryEvent,
-        string regionCode)
+        string regionCode,
+        double userGpsLat)
     {
         return new GeolocationRecord
         {
@@ -34,7 +36,8 @@ public class GeolocationRecord
             Latitude = latitude,
             LocationHistoryTrail = locationHistoryTrail,
             GeofenceEntryEvent = geofenceEntryEvent,
-            RegionCode = regionCode
+            RegionCode = regionCode,
+            UserGpsLat = userGpsLat
         };
     }
 
@@ -46,7 +49,8 @@ public class GeolocationRecord
         double latitude,
         string locationHistoryTrail,
         string geofenceEntryEvent,
-        string regionCode)
+        string regionCode,
+        double userGpsLat)
     {
         LocationData = locationData;
         GpsReading = gpsReading;
@@ -56,5 +60,6 @@ public class GeolocationRecord
         LocationHistoryTrail = locationHistoryTrail;
         GeofenceEntryEvent = geofenceEntryEvent;
         RegionCode = regionCode;
+        UserGpsLat = userGpsLat;
     }
 }

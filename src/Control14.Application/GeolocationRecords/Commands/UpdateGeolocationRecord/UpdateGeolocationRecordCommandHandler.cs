@@ -29,7 +29,8 @@ public class UpdateGeolocationRecordCommandHandler : IRequestHandler<UpdateGeolo
             request.Latitude,
             request.LocationHistoryTrail,
             request.GeofenceEntryEvent,
-            request.RegionCode);
+            request.RegionCode,
+            request.UserGpsLat);
 
         await _repository.UpdateAsync(record, cancellationToken);
 

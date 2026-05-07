@@ -31,7 +31,10 @@ public class UpdateNetworkRequestRecordCommandHandler : IRequestHandler<UpdateNe
             request.NicId,
             request.OriginAsn,
             request.RequestHeaders,
-            request.ResponseHeaders);
+            request.ResponseHeaders,
+            request.RemoteAddr,
+            request.XForwardedFor,
+            request.HardwareAddress);
 
         await _repository.UpdateAsync(record, cancellationToken);
 

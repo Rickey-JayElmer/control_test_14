@@ -1,9 +1,9 @@
+using Control14.Application.DTOs;
 using Control14.Application.AiInferenceRecords.Commands.CreateAiInferenceRecord;
 using Control14.Application.AiInferenceRecords.Commands.DeleteAiInferenceRecord;
 using Control14.Application.AiInferenceRecords.Commands.UpdateAiInferenceRecord;
-using Control14.Application.AiInferenceRecords.Queries.GetAiInferenceRecordById;
 using Control14.Application.AiInferenceRecords.Queries.GetAllAiInferenceRecords;
-using Control14.Application.DTOs;
+using Control14.Application.AiInferenceRecords.Queries.GetAiInferenceRecordById;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
